@@ -1,12 +1,14 @@
 package com.example.demo.dto;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class SimpleSource {
-    String name;
+
+    String userId;
+    String movieId;
+    String rating;
     // getters and setters
 }

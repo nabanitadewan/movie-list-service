@@ -1,22 +1,23 @@
 package com.example.demo.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
-@Table(name = "movie")
+@Table(name = "user_movie")
 @Data
 public class Movie {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    UUID id;
+    Long id;
 
-    @Column(name = "name")
-    String name;
+    @Column(name = "userId")
+    String userId;
+    @Column(name = "movieId")
+    String movieId;
+    @Column(name = "rating")
+    String rating;
 
 }
